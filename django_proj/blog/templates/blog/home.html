@@ -3,11 +3,18 @@
 
 {% block content %}
  {% for post in posts %}
-    <h2>{{post.title}}</h2>
-    <small>{{post.author}} on {{post.date_posted}}</small>
-    <p>
-      {{post.content}}
-    </p>
+   <article class="card mb-3">
+      <div class="card-header text-white bg-success card-subtitle p-3">
+      <h6 class="card-subtitle">Posted by {{post.author}} on {{post.date_posted}}</h6>
+    </div>
+    <div class="card-body">
+      <h2 class="card-title">{{post.title}}</h2>
+      <p class="card-text">
+        {{post.content}}
+      </p>
+    </div>
+ </article>
+  
     {% endfor %}
 {% endblock content %}
 
