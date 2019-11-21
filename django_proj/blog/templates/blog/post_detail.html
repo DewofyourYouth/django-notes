@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+   <article class="card mb-3">
+      <div class="card-header text-white bg-success card-subtitle p-3">
+      <h6 class="card-subtitle">Posted by <a class="text-dark" href="#">{{object.author.first_name}}</a> on {{object.date_posted | date:"F d, Y"}}</h6>
+    </div>
+    <div class="card-body">
+      <h2 class="card-title">{{object.title}}</h2>
+      <p class="card-text">
+        {{object.content | linebreaks}}
+      </p>
+    </div>
+ </article>
+  
+{% endblock content %}
