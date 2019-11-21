@@ -11,6 +11,10 @@
         {{object.content | linebreaks}}
       </p>
     </div>
+      <div class="card-footer">
+      <img width="40" src="{{post.author.profile.image.url}}" class="rounded-circle" alt="">
+     <span style="display: inline-block" class="text-muted pl-3">{{ post.date_posted | timesince }} ago</span> 
+    </div>
  </article>
   
 {% endblock content %}
