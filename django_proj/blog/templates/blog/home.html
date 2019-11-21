@@ -4,7 +4,8 @@
 {% block content %}
  {% for post in posts %}
    <article class="card mb-3">
-      <div class="card-header text-white bg-success card-subtitle p-3">
+     
+      <div class="card-header text-white bg-success card-subtitle p-3"> 
       <h6 class="card-subtitle">Posted by <a class="text-dark" href="#">{{post.author.first_name}}</a> on {{post.date_posted | date:"F d, Y"}}</h6>
     </div>
     <div class="card-body">
@@ -12,6 +13,10 @@
       <p class="card-text">
         {{post.content}}
       </p>
+    </div>
+    <div class="card-footer">
+      <img width="40" src="{{post.author.profile.image.url}}" class="rounded-circle" alt="">
+     <span style="display: inline-block" class="text-muted pl-3">{{ post.date_posted | timesince }} ago</span> 
     </div>
  </article>
   
